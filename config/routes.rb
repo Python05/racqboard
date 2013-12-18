@@ -1,4 +1,7 @@
 Racqboard::Application.routes.draw do
+  resources :referees
+
+
   resources :players
 
 
