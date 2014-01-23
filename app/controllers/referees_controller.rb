@@ -2,7 +2,7 @@ class RefereesController < ApplicationController
   # GET /referees
   # GET /referees.json
   def index
-    @referees = Referee.all
+    @referees = Referee.order('name asc')
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,10 +1,7 @@
 Racqboard::Application.routes.draw do
+
   resources :sponsors
-
-
   resources :referees
-
-
   resources :players
 
 
