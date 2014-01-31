@@ -1,13 +1,20 @@
 Racqboard::Application.routes.draw do
 
-  devise_for :users, path: 'user'
-
   resources :sponsors
   resources :referees
   resources :players
   resources :users
 
-  root :to => 'home#index'
+  devise_for :users, path: 'user'
+
+  devise_scope :user do
+    authenticated :user do
+      root :to => 'home#index'
+    end
+    unauthenticated :user do
+      root :to => 'devise/sessions#new'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
