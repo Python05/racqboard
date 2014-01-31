@@ -1,4 +1,6 @@
 class PlayersController < ApplicationController
+  before_filter :authenticate_user!, except: 'index'
+
   # GET /players
   # GET /players.json
   def index

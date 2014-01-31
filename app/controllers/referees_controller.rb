@@ -1,4 +1,6 @@
 class RefereesController < ApplicationController
+  before_filter :authenticate_user!, except: 'index'
+
   # GET /referees
   # GET /referees.json
   def index
