@@ -2,9 +2,9 @@
 <html>
 <head>
   <title>Racqboard</title>
-  <%= stylesheet_link_tag    "application", "#{params[:controller]}", :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= yield :asset_stylesheet %>
-  <%= javascript_include_tag "application", "#{params[:controller]}" %>
+  <%= javascript_include_tag "application" %>
   <%= yield :asset_javascript %>
   <%= csrf_meta_tags %>
   <script>
